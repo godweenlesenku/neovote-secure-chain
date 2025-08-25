@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Send, FileText, User, Mail, Phone, MapPin } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const formSchema = z.object({
   fullName: z.string().min(2, "Full name must be at least 2 characters"),
@@ -49,20 +50,15 @@ export const ApplicationForm = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('https://your-project-ref.supabase.co/functions/v1/submit-application', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer your-anon-key'
-        },
-        body: JSON.stringify({
+      const { data: result, error } = await supabase.functions.invoke('submit-application', {
+        body: {
           ...data,
           submittedAt: new Date().toISOString(),
-        }),
+        }
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to submit application');
+      if (error) {
+        throw new Error(error.message || 'Failed to submit application');
       }
 
       toast({
