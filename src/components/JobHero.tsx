@@ -33,8 +33,8 @@ export const JobHero = () => {
           </div>
 
           <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed max-w-3xl mx-auto">
-            Build the future of secure digital voting with <span className="text-primary-glow font-semibold">NeoVote</span> - 
-            a blockchain-powered platform revolutionizing democracy from Kenya to the world.
+            Build the future of blockchain-powered digital voting with <span className="text-primary-glow font-semibold">NeoVote</span> — 
+            featured in 7 pilot elections on Solana blockchain
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -56,18 +56,18 @@ export const JobHero = () => {
           </div>
 
           {/* Job highlights */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-primary-glow text-3xl font-bold mb-2">KSh 70K - 120K</div>
-              <div className="text-gray-200">Competitive Salary</div>
+          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20 flex items-center gap-3">
+              <span className="text-2xl">💰</span>
+              <span className="text-gray-200 font-medium">KSh 70,000 - 120,000</span>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-primary-glow text-3xl font-bold mb-2">Hybrid</div>
-              <div className="text-gray-200">Nairobi Based</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20 flex items-center gap-3">
+              <span className="text-2xl">🕐</span>
+              <span className="text-gray-200 font-medium">Part-time to Full-time</span>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-primary-glow text-3xl font-bold mb-2">Equity</div>
-              <div className="text-gray-200">Early Team Member</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20 flex items-center gap-3">
+              <span className="text-2xl">🏢</span>
+              <span className="text-gray-200 font-medium">Hybrid Work</span>
             </div>
           </div>
         </div>
