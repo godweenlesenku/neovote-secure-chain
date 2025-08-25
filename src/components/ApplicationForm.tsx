@@ -49,10 +49,11 @@ export const ApplicationForm = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('/api/submit-application', {
+      const response = await fetch('https://your-project-ref.supabase.co/functions/v1/submit-application', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': 'Bearer your-anon-key'
         },
         body: JSON.stringify({
           ...data,
