@@ -1,18 +1,13 @@
-import { JobHero } from "@/components/JobHero";
-import { JobDetails } from "@/components/JobDetails";
-import { ApplicationForm } from "@/components/ApplicationForm";
+// import { JobHero } from "@/components/JobHero";
+// import { JobDetails } from "@/components/JobDetails";
+import { ApplicationClosed } from "@/components/ApplicationClosed";
 
-const Index = () => {
+export default function Index() {
   return (
-    <div className="min-h-screen">
-      {/* SEO Meta Tags */}
-      <title>Junior Flutter Developer - LemyCode | NeoVote Blockchain Voting Platform</title>
-      
-      <JobHero />
-      <JobDetails />
-      <ApplicationForm />
+    <div className="min-h-screen bg-background">
+      {/* <JobHero /> */}
+      {/* <JobDetails /> */}
+      <ApplicationClosed />
     </div>
   );
-};
-
-export default Index;
+}
